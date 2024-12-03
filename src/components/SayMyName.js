@@ -2,7 +2,7 @@ function SayMyName (props){
 
     return (
         <div>
-            <p>Fala ai {props.nome}, suave</p>
+            <h1>Fala ai {props.nome}, suave</h1>
         </div>
     )
 }

@@ -5,7 +5,7 @@ function Pessoa ({foto,nome, idade, profissao, sexo}){
     return (
 
         <div>
-            <img src={foto} alt={nome} />
+            <img src={foto} width={280} height={250} alt={nome} />
             <p className={styles.fraseContent}>Nome: {nome}</p>
             <p>Idade: {idade}</p>
             <p className={styles.fraseContent}>Profissão: {profissao}</p>

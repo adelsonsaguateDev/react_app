@@ -1,7 +1,7 @@
 function Form() {
 
     function addUser(e){
-        e.event.preventDefault();
+        e.preventDefault();
         const nome = document.querySelector('input[name="nome"]').value;
         alert(`Nome cadastrado: ${nome}`);
         document.querySelector('input[name="nome"]').value = '';

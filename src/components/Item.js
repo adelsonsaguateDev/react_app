@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function Item({marca, ano_lacamento, outro}){
+function Item({marca, ano_lacamento}){
     return (
         <>
             <li>{marca} - {ano_lacamento}</li>

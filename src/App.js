@@ -1,31 +1,27 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Contacto from "./pages/Contacto";
 import Empresa from "./pages/Empresa";
+import NavBar from "./components/layout/NavBar";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
     <Router>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/empresa">Empresa</Link>
-          </li>
-          <li>
-            <Link to="/contacto">Contacto</Link>
-          </li>
-        </ul>
-      </nav>
+      <NavBar /> 
+      
 
+      {/* Um <Routes> examina seus <Route>s filhos e
+      renderiza o primeiro que corresponde ao URL actual. */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/empresa" element={<Empresa />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
+
+      <Footer />
     </Router>
+    
   );
 }
 

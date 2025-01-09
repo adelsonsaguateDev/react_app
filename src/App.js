@@ -1,19 +1,20 @@
+import { useState } from 'react';
 import './App.css';
-import OutraLista from './components/OutraLista';
+import SeuNome from './components/SeuNome';
+import Saudacao from './components/Saudacao';
 
 
 
 function App() {
 
-  const disciplinas = ['Matematica', 'Português','Inglês']
+  const [nome, setNome] = useState()
+
   return (
     <div className="App">
-      <h1>Renderização de Listas!</h1>
-      <OutraLista itens={disciplinas} />
-      <OutraLista itens={[]} />
-      
-
-    
+      <h1>State Lift!</h1>
+      <SeuNome setNome={setNome} />
+      <Saudacao nome={nome}/>
+     
     </div>
   );
 }
